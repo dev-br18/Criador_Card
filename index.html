@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/icon-complete.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Criar Cartão</title>
+</head>
+<body>
+  <main>
+    <div class="card">
+      <div class="card-back">
+        <img src="images/bg-card-back.png" alt="" aria-hidden="true">
+        <div class="cvc">
+          <span class="card-cvc">000</span>
+        </div>
+      </div>
+      <div class="card-front">
+        <img src="images/bg-card-front.png" alt="">
+        <div class="card-details">
+          <img src="images/card-logo.svg" alt="">
+          <span class="card-number">0000 0000 0000 0000</span>
+          <div class="info">
+          <span class="cardholder-name">Jane Appleseed</span>
+          <span class="exp-date">00/00</span>
+        </div>
+        </div>
+        
+      </div>
+    </div>
+    <form  action="#" method="post" class="meuForm">
+      <label for="name">Cardholder Name</label>
+      <input id="name" type="text" placeholder=" Jane Appleseed" maxlength="25">
+      <label for="number">Card Number</label>
+      <input id="number" type="number" placeholder="1234 5678 9123 0000" oninput="limitarnumero(this,16)">
+      <div class="info-card">
+        <label  class="item" for="date">Exp. Date (MM/YY)</label>
+        <label class="item" for="cvc">CVC</label>
+        <div class="inputs">
+        <input id="date" class="item2" type="number" placeholder="MM" oninput="limitarnumero(this,2)">
+        <input id="date2" class="item2" type="number" placeholder="YY" oninput="limitarnumero(this,2)">
+        <input id="cvc" class="item2"type="number" placeholder="123" oninput="limitarnumero(this,3)">
+      </div>
+      </div>
+      <button type="submit">Confirm</button>
+    </form>
+
+    <div class="d-none">
+      <img src="images/icon-complete.svg" alt="">
+      <h1 >THANK YOU!</h1>
+      <p>Creat Sucess</p>
+      <button>Continue</button>
+    </div>
+  </main>
+  <script src="index.js"></script>
+</body>
+</html>
